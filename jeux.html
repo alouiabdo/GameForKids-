@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game For kids</title>
+    <link rel="stylesheet" href="jeux.css">
+    <script></script>
+</head>
+<body>
+    
+    <script>
+    function allowDrop(ev) {
+
+        
+        ev.preventDefault();
+      }
+      
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+      
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+      }
+      </script>
+    <header>
+        <div id="world"><img src="imag/Animals/logo/kids  world.png" alt="world" width="80"></div>
+        <div id="banda"><img src="imag/Animals/logo/banda.png" alt="banda" width="40"></div>
+    </header>
+    <section>
+        <div id="img" class="img"><img src="PNG/ARNAB.png" alt="" draggable="false" width="300"></div>
+        <h2 id="div" ondrop="drop(event)" ondragover="allowDrop(event)">
+        
+    </h2>
+        <div id="alf"  ondrop="drop(event)" ondragover="allowDrop(event)" >
+            <p id="ef" draggable="true" ondragstart="drag(event)">Rabbit</p>
+            <p id="ef1" draggable="true" ondragstart="drag(event)">Wolf</p>
+            <p id="ef2" draggable="true" ondragstart="drag(event)">Bear</p>
+            <p id="ef3" draggable="true" ondragstart="drag(event)">Elephant</p>
+            <p id="ef4" draggable="true" ondragstart="drag(event)">Dog</p>
+            <p id="ef5" draggable="true" ondragstart="drag(event)">Monkey</p>
+            <p id="ef6" draggable="true" ondragstart="drag(event)">Cat</p>
+            <p id="ef7" draggable="true" ondragstart="drag(event)">Tiger</p>
+            <p id="ef8" draggable="true" ondragstart="drag(event)">Lion</p>
+            <p id="ef9" draggable="true" ondragstart="drag(event)">Squirrel</p>
+            <p id="ef10"draggable="true" ondragstart="drag(event)">Fox</p>
+        </div>
+        <button>next</button>
+    </section>
+    <script src="jeux.js"></script>
+</body>
+</html>
